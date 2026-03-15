@@ -65,6 +65,30 @@ Generate **professional offline forensic audit reports** that include:
 
  ---
 
+# 🧠 Threat Model
+
+TraceZero Sentinel protects against **unintentional metadata leaks** when sharing files online.
+
+Examples of exposed forensic data include:
+
+- GPS coordinates embedded in images
+- Camera device identifiers
+- Author names in documents
+- Creation timestamps
+- Software fingerprints
+- OS-generated tracker files (.DS_Store, Thumbs.db)
+
+Attackers, investigators, or automated scraping systems can use this metadata to identify:
+
+- the file creator
+- the device used
+- the location where the file was created
+- editing history
+
+TraceZero removes these traces before files are distributed.
+
+---
+
 # 🗂️ Supported File Types
 
 | Format | Sanitization Protocol |
@@ -74,7 +98,7 @@ Generate **professional offline forensic audit reports** that include:
 | **PDF** | Remove author, creation date, software metadata |
 | **DOCX** | Remove revision history + creator identity |
 
-#### More Format Support In future (maybe)
+#### More Format Support In future releases
 
 ---
 
